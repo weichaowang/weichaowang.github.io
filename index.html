@@ -8,32 +8,32 @@
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="挥写程序媛的故事">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="挥写程序媛的故事">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="挥写程序媛的故事" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
+  <script src="js/leftTime.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
   
 
 </head>
 
 <body>
-  <div id="container">
+ <div id="container">
     <div id="wrap">
       <header id="header">
   <div id="banner"></div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">挥写程序媛的故事</a>
       </h1>
       
     </div>
@@ -46,12 +46,7 @@
           <a class="main-nav-link" href="/archives">Archives</a>
         
       </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
+      
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
       </div>
@@ -64,210 +59,75 @@
   <div class="article-inner">
     
     
-      <header class="article-header">
+     
         
     <h1>
-      	<script language="javascript" type="text/javascript">
-        var interval = 1000;
-        function ShowCountDown(year,month,day,hour,minute,divname)
-        {
-        var now = new Date();
-        var endDate = new Date(year, month-1, day,hour,minute,);
-        var leftTime=endDate.getTime()-now.getTime();
-        var leftsecond = parseInt(leftTime/1000);
-        //var day1=parseInt(leftsecond/(24*60*60*6));
-        var day1=Math.floor(leftsecond/(60*60*24));
-        var hour=Math.floor((leftsecond-day1*24*60*60)/3600);
-        var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60);
-        var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60);
-        var cc = document.getElementById(divname);
-        cc.innerHTML = "距离"+year+"年"+month+"月"+day+"日还有："+day1+"天"+hour+"小时"+minute+"分"+second+"秒";
-        }
-        window.setInterval(function(){ShowCountDown(2019,2,04,00,00,'divdown1');}, interval);
-        </script>
 
-        
-    <h1>
-    <h1 itemprop="name">
-      <span id="divdown1"></span>
+      <tr>
+            <th colspan="3">距2019/02/04 00:00:00倒计时</th>
+          </tr>
+          <tr>
+            <td class="colspan-a">
+              <div class="data-show-box" id="dateShow1">
+                <span class="date-tiem-span d">00</span>天
+                <span class="date-tiem-span h">00</span>时
+                <span class="date-tiem-span m">00</span>分
+                <span class="date-s-span s">00</span>秒
+              </div>
+            </td>
+            <td class="colspan-b"></td>
+            <td class="colspan-c">
+
+            </td>
+          </tr>
+          <script type="text/javascript">
+            $(function(){
+              //日期倒计时
+            $.leftTime("2019/02/04 00:00:00",function(d){
+              if(d.status){
+                var $dateShow1=$("#dateShow1");
+                $dateShow1.find(".d").html(d.d);
+                $dateShow1.find(".h").html(d.h);
+                $dateShow1.find(".m").html(d.m);
+                $dateShow1.find(".s").html(d.s);
+              }
+            });
+            });
+          </script>
     </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/22/超超/" data-id="cj6ptk0t50002u0trwq79rdwb" class="article-share-link">Share</a>
       
       
-    </footer>
+      
   </div>
-  
-</article>
-
-
-  
-    <article id="post-test-my-site" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/22/test-my-site/" class="article-date">
-  <time datetime="2017-08-22T02:22:59.000Z" itemprop="datePublished">2017-08-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/test-my-site/">test_my_site</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/22/test-my-site/" data-id="cj6ptk0si0001u0tr7elngxml" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/22/hello-world/" class="article-date">
-  <time datetime="2017-08-22T01:39:50.296Z" itemprop="datePublished">2017-08-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/22/hello-world/" data-id="cj6ptk0sa0000u0trso0c9q1w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
   
 
 </section>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/08/22/超超/">超超</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/22/test-my-site/">test_my_site</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/22/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
+  <aside id="sidebar"><aside>
         
       </div>
       <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2017 weichao wang<br>
     </div>
   </div>
 </footer>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+   <script src="/js/script.js"></script>
 
   </div>
 </body>
